@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <div class="logo"><a href="index.html"><img src="img/logo.png" alt=""></a></div>
+        <nav class="nav">
+          <ul>
+            <li class="li"><a href="index.html" class="nav-item">Студия</a></li>
+            <li class="li"><a href="#" class="nav-item">Клиенты</a></li>
+            <li class="li"><a href="catalog.html" class="nav-item active-nav">Магазин</a></li>
+            <li class="li"><a href="#" class="nav-item">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="cart"><a href="#" class="nav-item">Корзина</a></div>
+      </div>
+      <div class="nav-burger">
+        <div class="nav-burger__burger">
+          <span class="span-1"></span>
+          <span class="span-2"></span>
+          <span class="span-3"></span>
+        </div>
+        <div class="nav-burger__wrapper">
+          <div class="nav-burger__item"><a href="index.html">Студия</a></div>
+          <div class="nav-burger__item"><a href="#">Клиенты</a></div>
+          <div class="nav-burger__item"><a href="catalog.html">Магазин</a></div>
+          <div class="nav-burger__item"><a href="#">Контакты</a></div>
+          <div class="nav-burger__item"><a href="#">корзина</a></div>
+        </div>
+      </div>
+      <h1 class="header-catalog">Магазин готовых шаблонов</h1>
+    </div>
+  </header>
+  <div class="catalog">
+    <div class="container">
+      <div class="catalog__wrapper">
+        <div class="filter">
+          <div class="filter__pricing-title">Стоимость:</div>
+          <div class="filter__pricing">
+            <div id="slider-price"></div>
+            <div class="price-box">
+              <input type="text" name="minPrice" readonly style="border:0; color: #283136; font-weight:500; position: absolute;
+                  top: 100px; left: 30px;">
+              <input type="text" name="maxPrice" readonly style="border:0; color: #283136; font-weight:500; position: absolute;
+                  top: 100px; left: 195px;">
+            </div>
+            <span class="slider-price__from">От</span>
+            <span class="slider-price__to">До</span>
+            <div id="slider-range"></div>
+          </div>
+          <div class="filter__web">
+            <div class="filter-web__title filter-title">Сетка:</div>
+            <label class="label-radio">
+              <input type="radio" name="filter" class="radio">
+              <span class="fake-radio"></span>
+              <span class="text-radio">Адаптивная</span>
+            </label>
+            <label class="label-radio">
+              <input type="radio" name="filter" class="radio">
+              <span class="fake-radio"></span>
+              <span class="text-radio">Фиксированная</span>
+            </label>
+            <label class="label-radio">
+              <input type="radio" name="filter" class="radio">
+              <span class="fake-radio"></span>
+              <span class="text-radio">Резиновая</span>
+            </label>
+          </div>
+          <div class="filter__specials">
+            <div class="filter-specials__title filter-title">Особенности:</div>
+            <label class="label-checkbox">
+              <input type="checkbox" class="checkbox">
+              <span class="fake-checkbox"></span>
+              <span class="text-checkbox">Слайдер</span>
+            </label>
+            <label class="label-checkbox">
+              <input type="checkbox" class="checkbox">
+              <span class="fake-checkbox"></span>
+              <span class="text-checkbox">Блок преимуществ</span>
+            </label>
+            <label class="label-checkbox">
+              <input type="checkbox" class="checkbox">
+              <span class="fake-checkbox"></span>
+              <span class="text-checkbox">Новости</span>
+            </label>
+            <label class="label-checkbox">
+              <input type="checkbox" class="checkbox">
+              <span class="fake-checkbox"></span>
+              <span class="text-checkbox">Галерея</span>
+            </label>
+            <label class="label-checkbox">
+              <input type="checkbox" class="checkbox">
+              <span class="fake-checkbox"></span>
+              <span class="text-checkbox">Корзина</span>
+            </label>
+          </div>
+          <a href="#">
+            <div class="filter__btn">ПОКАЗАТЬ</div>
+          </a>
+        </div>
+        <div class="catalog-wrapper">
+          <div class="sorting">
+            <div class="sorting__title">Сортировать</div>
+            <div class="sorting__category">
+              <div class="sorting__from-price category-none category-active"><a href="#">По цене</a></div>
+              <div class="sorting__from-type category-none"><a href="#">По типу</a></div>
+              <div class="sorting__from-name category-none"><a href="#">По названию</a></div>
+            </div>
+            <div class="sorting__triangles">
+              <div class="sorting__triangle-top triangle-none triangle-active"><button></button></div>
+              <div class="sorting__triangle-bottom triangle-none"><button></button></div>
+            </div>
+          </div>
+          <div class="catalog__store">
+            <div class="catalog-store__item">
+              <div class="store-item__circle"></div>
+              <div class="store-item__circle"></div>
+              <div class="store-item__circle"></div>
+              <div class="store-item__site-img"><img src="img/site-img-1.jpg" alt="Фото Сайта"></div>
+              <div class="store-item__hover">
+                <div class="store-hover__title">Sedona</div>
+                <div class="store-hover__subtitle">Информационный сайт <br>для туристов</div>
+                <a href="#">
+                  <div class="store-hover__button">9 900 РУБ.</div>
+                </a>
+              </div>
+            </div>
+            <div class="catalog-store__item">
+              <div class="store-item__circle"></div>
+              <div class="store-item__circle"></div>
+              <div class="store-item__circle"></div>
+              <div class="store-item__site-img"><img src="img/site-img-2.jpg" alt="Фото Сайта"></div>
+              <div class="store-item__hover">
+                <div class="store-hover__title">Pink</div>
+                <div class="store-hover__subtitle">Сайт, который изменит <br> мир вокруг тебя</div>
+                <a href="#">
+                  <div class="store-hover__button">9 900 РУБ.</div>
+                </a>
+              </div>
+            </div>
+            <div class="catalog-store__item">
+              <div class="store-item__circle"></div>
+              <div class="store-item__circle"></div>
+              <div class="store-item__circle"></div>
+              <div class="store-item__site-img"><img src="img/site-img-3.jpg" alt="Фото Сайта"></div>
+              <div class="store-item__hover">
+                <div class="store-hover__title">Bordinski</div>
+                <div class="store-hover__subtitle">Сайт для представления <br> своего барбершопа</div>
+                <a href="#">
+                  <div class="store-hover__button">9 900 РУБ.</div>
+                </a>
+              </div>
+            </div>
+            <div class="catalog-store__item">
+              <div class="store-item__circle"></div>
+              <div class="store-item__circle"></div>
+              <div class="store-item__circle"></div>
+              <div class="store-item__site-img"><img src="img/site-img-4.jpg" alt="Фото Сайта"></div>
+              <div class="store-item__hover">
+                <div class="store-hover__title">Mishka</div>
+                <div class="store-hover__subtitle">Лендинг Пэйдж для продажи <br>вязанных "штук" с возможностью
+                  <br>оставлять заявки</div>
+                <a href="#">
+                  <div class="store-hover__button">9 900 РУБ.</div>
+                </a>
+              </div>
+            </div>
+            <div class="catalog-store__item">
+              <div class="store-item__circle"></div>
+              <div class="store-item__circle"></div>
+              <div class="store-item__circle"></div>
+              <div class="store-item__site-img"><img src="img/site-img-5.jpg" alt="Фото Сайта"></div>
+              <div class="store-item__hover">
+                <div class="store-hover__title">А+</div>
+                <div class="store-hover__subtitle">Сайт, который поможет в учебе <br>и найти работу</div>
+                <a href="#">
+                  <div class="store-hover__button">9 900 РУБ.</div>
+                </a>
+              </div>
+            </div>
+            <div class="catalog-store__item">
+              <div class="store-item__circle"></div>
+              <div class="store-item__circle"></div>
+              <div class="store-item__circle"></div>
+              <div class="store-item__site-img"><img src="img/site-img-6.jpg" alt="Фото Сайта"></div>
+              <div class="store-item__hover">
+                <div class="store-hover__title">Крафтовый квас</div>
+                <div class="store-hover__subtitle">Пивка для рывка</div>
+                <a href="#">
+                  <div class="store-hover__button">9 900 РУБ.</div>
+                </a>
+              </div>
+            </div>
+            <div class="page-numbers">
+              <button type="button" class="page-numbers__item active-page">1</button>
+              <button type="button" class="page-numbers__item">2</button>
+              <button type="button" class="page-numbers__item">3</button>
+              <button type="button" class="page-numbers__next">Следующая</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contacts">
+    <div class="container">
+      <div class="contact-form">
+        <div class="contact-form__title">NЁRDS DESIGN STUDIO</div>
+        <div class="contact-form__desc">191186, Санкт-Петербург,
+          ул. Б. Конюшенная, д. 19/8</div>
+        <div class="contact-form__phone"><a href="#">тел. +7 (812) 275-75-75</a></div>
+        <a href="#">
+          <div class="contact-form__btn">НАПИШИТЕ НАМ</div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__icons">
+          <a href="#"><img src="img/footer-icon-1.png" alt="Вконтакте"></a>
+          <a href="#"><img src="img/footer-icon-2.png" alt="Facebook"></a>
+          <a href="#"><img src="img/footer-icon-3.png" alt="Instagram"></a>
+        </div>
+        <div class="footer__titles">
+          <div class="footer__title">Давайте дружить, это выгодно!</div>
+          <div class="footer__desc">Скидка 10% для друзей из социальных сетей.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+</body>
+
+</html>
