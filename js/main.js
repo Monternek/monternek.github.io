@@ -6,7 +6,7 @@ $(function () {
     prevArrow: '.arrow-left',
     nextArrow: '.arrow-right',
     dots: false,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 5000,
   });
 
@@ -24,7 +24,7 @@ $(function () {
     fade: true,
     dots: false,
     autoplay: false,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     prevArrow: '.arrow-left__companys',
     nextArrow: '.arrow-right__companys',
   });
@@ -35,13 +35,17 @@ $(function () {
 
 
 
-  $( ".nav-burger" ).click(function() {
-    $( this ).toggleClass( "active" );
-  });
 
-  $( ".nav-burger" ).click(function() {
+  $( ".burger-absolute" ).click(function() {
     $( ".nav-burder-display__sections" ).toggleClass( "active-3" );
   });
+
+  $( ".burger-absolute" ).click(function() {
+    $( ".nav-burger" ).toggleClass( "active" );
+  });
+
+
+  
 
 
   
@@ -54,6 +58,8 @@ $(function () {
     centerMode: true,
     prevArrow: '.arrow-left__slider-block',
     nextArrow: '.arrow-right__slider-block',
+    autoplay: false,
+    autoplaySpeed: 3000,
     responsive: [{
       breakpoint: 1530,
       settings: {
@@ -74,8 +80,8 @@ $(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
-    autoplay: false,
-    autoplaySpeed: 5000,
+    autoplay: true,
+    autoplaySpeed: 4000,
 
 
     arrows: false,
